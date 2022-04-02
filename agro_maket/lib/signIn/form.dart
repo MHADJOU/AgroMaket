@@ -57,38 +57,101 @@ class _formState extends State<form> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      child: Container(
-        margin: EdgeInsets.fromLTRB(0, 0, 40, 0),
-        width: 282,
-        height: 45,
-        padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-        decoration: BoxDecoration(
-          border: Border.all(
-            color: Colors.black,
-            width: 2.0
-          ),
-          borderRadius: BorderRadius.all(Radius.circular(3))
-        ),
-        child: TextFormField(
-        
-          decoration: InputDecoration(
-            
-            icon: Image(
-              width: 31,
-              height: 31,
-              image: AssetImage('assets/icons/user.png')
+      child: Column(
+        children: [
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 40, 0),
+            width: 282,
+            height: 45,
+            padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.black,
+                width: 2.0
               ),
-            
-            hintText: 'username',
-            hintStyle: TextStyle(
-              fontFamily: 'Sarala',
-              fontSize: 18,
-              fontStyle: FontStyle.normal,
-              
+              borderRadius: BorderRadius.all(Radius.circular(3))
             ),
-            border: InputBorder.none,
-        ),
+            child: TextFormField(
+              decoration: InputDecoration(
+                
+                icon: Image(
+                  width: 31,
+                  height: 31,
+                  image: AssetImage('assets/icons/user.png')
+                  ),
+                
+                hintText: 'username',
+                hintStyle: TextStyle(
+                  fontFamily: 'Sarala',
+                  fontSize: 18,
+                  fontStyle: FontStyle.normal,
+                  
+                ),
+                border: InputBorder.none,
+            ),
     ),
+          ),
+          SizedBox(height: 27,),
+          // input password
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 40, 0),
+            width: 282,
+            height: 45,
+            padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.black,
+                width: 2.0
+              ),
+              borderRadius: BorderRadius.all(Radius.circular(3))
+            ),
+            child: TextFormField(
+              decoration: InputDecoration(
+                icon: Image(
+                  width: 31,
+                  height: 31,
+                  image: AssetImage('assets/icons/padlock.png')
+                  ),
+                
+                hintText: 'username',
+                hintStyle: TextStyle(
+                  fontFamily: 'Sarala',
+                  fontSize: 18,
+                  fontStyle: FontStyle.normal,
+                  
+                ),
+                border: InputBorder.none,
+            ),
+    ),
+    
+          ),
+          SizedBox(height: 27,),
+
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 40, 0),
+            width: 282,
+            height: 45,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(12))
+            ),
+            child: RaisedButton(
+              color: Color.fromARGB(255, 19, 89, 2),
+              onPressed: (){},
+              child: Text(
+                'Connexion',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color:  Colors.white,
+                  fontFamily: 'Sarala',
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.normal,
+                  letterSpacing: 1,
+                ),
+            ),
+          ),
+          )
+        ],
       )
     );
   }

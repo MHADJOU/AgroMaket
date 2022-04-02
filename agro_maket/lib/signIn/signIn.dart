@@ -22,9 +22,77 @@ class _SignInState extends State<SignIn> {
            Logo(),
            SizedBox(height: 58,),
            Connexion(),
+           SizedBox(height: 27,),
+           forgetPassword(),
+           SizedBox(height: 61,),
+           SignUp(),
          ],
        ),
       )
+    );
+  }
+}
+
+class forgetPassword extends StatelessWidget {
+  const forgetPassword({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: InkWell(
+        onTap: (){
+         // Navigator.pushNamed(context, "/");
+        },
+        child: Text(
+          'forget password',
+          style: TextStyle(
+            fontFamily: 'Sarala',
+            fontSize: 12,
+            fontStyle: FontStyle.normal,
+            letterSpacing: 0.8,
+            color: Color.fromARGB(255, 10, 54, 2)
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+//SignUp
+
+class SignUp extends StatelessWidget {
+  const SignUp({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return  Center(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              "Don't you have an account ?",
+              style: TextStyle(
+              fontFamily: 'Sarala',
+              fontSize: 14,
+              fontStyle: FontStyle.normal,
+              color: Color.fromARGB(255, 10, 54, 2)
+            ),
+            ),
+            SizedBox(width: 6,),
+            InkWell(
+              onTap: (){},
+              child: Text(
+                'Sign Up',
+                 style: TextStyle(
+                  fontFamily: 'RedRose',
+                  fontSize: 16,
+                  fontStyle: FontStyle.normal,
+                  color: Color.fromARGB(255, 19,89, 2)
+          ),
+                ),
+            )
+          ],
+      ),
     );
   }
 }
