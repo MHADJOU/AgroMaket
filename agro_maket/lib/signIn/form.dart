@@ -36,7 +36,7 @@ class _ConnexionState extends State<Connexion> {
               style: Textstyle,
               ),
           ),
-          SizedBox(height: 10,),   // figma height: 27
+          SizedBox(height: 27,),   // figma height: 27
           form(),
         ],
       ),
@@ -54,6 +54,7 @@ class form extends StatefulWidget {
 }
 
 class _formState extends State<form> {
+  int counter = 0;
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -73,7 +74,6 @@ class _formState extends State<form> {
             ),
             child: TextFormField(
               decoration: InputDecoration(
-                
                 icon: Image(
                   width: 31,
                   height: 31,
@@ -88,6 +88,7 @@ class _formState extends State<form> {
                   
                 ),
                 border: InputBorder.none,
+                
             ),
     ),
           ),
@@ -132,11 +133,12 @@ class _formState extends State<form> {
             width: 282,
             height: 45,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(12))
+              color:Color.fromARGB(255, 19, 89, 2),
+              borderRadius: BorderRadius.all(Radius.circular(12)),
             ),
-            child: RaisedButton(
-              color: Color.fromARGB(255, 19, 89, 2),
-              onPressed: (){},
+            child: InkWell(
+              //focusColor: Color.fromARGB(255, 19, 89, 2),
+              onTap: (){},
               child: Text(
                 'Connexion',
                 textAlign: TextAlign.center,

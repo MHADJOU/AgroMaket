@@ -24,7 +24,7 @@ class _SignInState extends State<SignIn> {
            Connexion(),
            SizedBox(height: 27,),
            forgetPassword(),
-           SizedBox(height: 61,),
+           SizedBox(height: 40,),
            SignUp(),
          ],
        ),
@@ -42,6 +42,7 @@ class forgetPassword extends StatelessWidget {
       child: InkWell(
         onTap: (){
          // Navigator.pushNamed(context, "/");
+         Navigator.pushNamed(context, "/forgetPass");
         },
         child: Text(
           'forget password',
@@ -65,33 +66,41 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Center(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              "Don't you have an account ?",
-              style: TextStyle(
-              fontFamily: 'Sarala',
-              fontSize: 14,
-              fontStyle: FontStyle.normal,
-              color: Color.fromARGB(255, 10, 54, 2)
+    return  Padding(
+      //padding: const EdgeInsets.fromLTRB(40, 0, 0, 0),
+      padding: EdgeInsets.only(left: 70),
+
+      child: Center(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                "Don't you have an account ?",
+                style: TextStyle(
+                fontFamily: 'Sarala',
+                fontSize: 14,
+                fontStyle: FontStyle.normal,
+                color: Color.fromARGB(255, 10, 54, 2)
+              ),
+              ),
+              SizedBox(width: 6,),
+              InkWell(
+                onTap: (){
+                  //if text taped go to Sign  Up page
+                  Navigator.pushNamed(context, "/SignUp");
+                },
+                child: Text(
+                  'Sign Up',
+                   style: TextStyle(
+                    fontFamily: 'RedRose',
+                    fontSize: 16,
+                    fontStyle: FontStyle.normal,
+                    color: Color.fromARGB(255, 19,89, 2)
             ),
-            ),
-            SizedBox(width: 6,),
-            InkWell(
-              onTap: (){},
-              child: Text(
-                'Sign Up',
-                 style: TextStyle(
-                  fontFamily: 'RedRose',
-                  fontSize: 16,
-                  fontStyle: FontStyle.normal,
-                  color: Color.fromARGB(255, 19,89, 2)
-          ),
-                ),
-            )
-          ],
+                  ),
+              )
+            ],
+        ),
       ),
     );
   }
