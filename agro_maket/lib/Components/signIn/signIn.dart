@@ -17,17 +17,22 @@ class _SignInState extends State<SignIn> {
         child: Container(
           width: double.infinity,
          // height: double.infinity,
-         child: Column(
-           children: [
-             SizedBox(height: 120,), // figma height:63
-             Logo(),
-             SizedBox(height: 58,),
-             Connexion(),
-             SizedBox(height: 27,),
-             forgetPassword(),
-             SizedBox(height: 40,),
-             SignUp(),
-           ],
+         child: ListView.builder(
+           itemCount: 1,
+           itemBuilder: (context, index){
+           return Column(
+             children: [
+               SizedBox(height: 120,), // figma height:63
+               Logo(),
+               SizedBox(height: 58,),
+               Connexion(),
+               SizedBox(height: 27,),
+               forgetPassword(),
+               SizedBox(height: 40,),
+               SignUp(),
+             ],
+           );
+           },
          ),
         ),
       )

@@ -14,12 +14,18 @@ class _CreateCountState extends State<CreateCount> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          SizedBox(height: 80,),
-          Logo(),
-          formCount(),
-        ],
+      body: ListView.builder(
+        itemCount: 1,
+        itemBuilder: (context, index){
+          return Column(
+            children: [
+              SizedBox(height: 80,),
+              Logo(),
+              formCount(),
+          ],
+        );
+        },
+       
       ),
     );
   }

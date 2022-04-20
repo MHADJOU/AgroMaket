@@ -1,19 +1,23 @@
-import 'package:agro_maket/welcome.dart';
+import 'package:agro_maket/Screens/welcome.dart';
 import 'package:flutter/material.dart';
-import 'logo.dart';
-import 'signIn/signIn.dart';
-import 'signUp/signUp.dart';
-import 'password/forget.dart';
-import 'password/confirmEmail.dart';
+import 'Screens/logo.dart';
+import 'Components/signIn/signIn.dart';
+import 'Components/signUp/signUp.dart';
+import 'Components/password/forget.dart';
+import 'Components/password/confirmEmail.dart';
+import 'Screens/home.dart';
+
 void main() =>  runApp(MaterialApp(
-  initialRoute: '/',
+  initialRoute: '/home',
   routes: {
-    '/':(context) => Loading(),
+   // '/':(context) => Loading(),
     '/connexion': (context) => SignIn(),
-    '/SignUp': (context) => CreateCount(),
+    '/SignUp': (context) => const CreateCount(),
     '/welcome' :(context) => Welcome(),
     '/forgetPass':(context) => forgetPass(),
-    '/confirmEmail':(context) => ConfirmPass(),
+    '/confirmEmail':(context) => const ConfirmPass(),
+    '/home' : (context) => const Home(),
+
   },
 ),
 );

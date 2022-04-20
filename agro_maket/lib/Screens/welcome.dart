@@ -1,4 +1,4 @@
-import 'package:agro_maket/signIn/logo.dart';
+import 'package:agro_maket/Components/signIn/logo.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatelessWidget {
