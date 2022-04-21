@@ -60,6 +60,22 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/logo.png
+    - assets/apple.png
+    - assets/apricots.png
+    - assets/bananas.png
+    - assets/beans.png
+    - assets/cucumbers.png
+    - assets/green-beans.png
+    - assets/juicy-oranges.png
+    - assets/leek.png
+    - assets/oranges.png
+    - assets/papayas.png
+    - assets/salad.png
+    - assets/stockvault-green-grapes.png
+    - assets/stockvault-tuna.png
+    - assets/tomatoes.png
+    - assets/watermelons.png
+    
     #add Icons
     - assets/icons/add.png
     - assets/icons/bag.png

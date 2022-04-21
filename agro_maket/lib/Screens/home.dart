@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:agro_maket/Components/articles/boxArticles.dart';
+import 'package:agro_maket/Components/articles/homeArticles.dart';
 
 class Home extends StatefulWidget {
   const Home({ Key? key }) : super(key: key);
@@ -16,8 +18,8 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.white,
         //title: Text('je suis'),
         leading: InkWell(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 30.0),
+          child: const Padding(
+            padding: EdgeInsets.only(left: 30.0),
             child: Image(
               height: 26.0,
               width: 26.0,
@@ -29,8 +31,8 @@ class _HomeState extends State<Home> {
         // Action button (bag  button)
         actions: [
           InkWell(
-            child: Padding(
-              padding: const EdgeInsets.only(right: 30.0),
+            child: const Padding(
+              padding: EdgeInsets.only(right: 30.0),
               child: Image(
                 height: 26.0,
                 width: 26.0,
@@ -43,6 +45,7 @@ class _HomeState extends State<Home> {
           )
         ],
       ),
+      body: Article(),//const homeArticle(),
 
       //Bottom navigator bar
       bottomNavigationBar: BottomNavigationBar(
@@ -101,7 +104,7 @@ class _HomeState extends State<Home> {
                     image: AssetImage('assets/icons/person.png'),
                   ),
               ),
-                label: "",
+                label: '',
               ),
         ]
         ),
