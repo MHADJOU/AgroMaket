@@ -34,7 +34,7 @@ class Article extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(30.0, 20.0, 30.0, 6.0),
+      padding: const EdgeInsets.fromLTRB(30.0, 20.0, 0.0, 6.0),
       child: Container(
         width: 140.0,
         height: 243.0,

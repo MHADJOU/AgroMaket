@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
           )
         ],
       ),
-      body: Article(),//const homeArticle(),
+      body: homeArticle(),//const homeArticle(),
 
       //Bottom navigator bar
       bottomNavigationBar: BottomNavigationBar(

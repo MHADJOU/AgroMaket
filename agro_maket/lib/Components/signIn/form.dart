@@ -128,7 +128,7 @@ class _formState extends State<form> {
           ),
           SizedBox(height: 27,),
 
-          Container(
+                            Container(
             margin: EdgeInsets.fromLTRB(0, 0, 40, 0),
             width: 282,
             height: 45,
@@ -138,8 +138,10 @@ class _formState extends State<form> {
             ),
             child: InkWell(
               //focusColor: Color.fromARGB(255, 19, 89, 2),
-              onTap: (){},
-              child: Text(
+              onTap: (){
+                Navigator.pushNamed(context, '/home');
+              },
+              child: const Text(
                 'Connexion',
                 textAlign: TextAlign.center,
                 style: TextStyle(

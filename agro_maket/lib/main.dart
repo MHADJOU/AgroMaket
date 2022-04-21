@@ -10,7 +10,7 @@ import 'Screens/home.dart';
 void main() =>  runApp(MaterialApp(
   initialRoute: '/home',
   routes: {
-   // '/':(context) => Loading(),
+    //'/':(context) => Loading(),
     '/connexion': (context) => SignIn(),
     '/SignUp': (context) => const CreateCount(),
     '/welcome' :(context) => Welcome(),
