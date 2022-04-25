@@ -1,13 +1,34 @@
 import 'package:flutter/material.dart';
+import 'classes.dart';
 
+class Article extends StatefulWidget {
+ // Article({ Key? key,required this.index }) : super(key: key)
+    int index = 0;
+  Article (this.index);
+  //Article._();
+  @override
+  State<Article> createState() => _ArticleState();
+}
 
-class Article extends StatelessWidget {
-  //const Article({ Key? key }) : super(key: key);
-   double price = 300.0;
-   String unity = "\$";
-   String title = "Apple";
-   String kilo = "/Kg";
-   String description = "Lorem Ipsum is simply dummy text ";
+class _ArticleState extends State<Article> {
+  
+   final List<Food> _food = [
+                  Food(image: 'assets/apple.png',name: 'Apple', price: 10.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/apricots.png',name: 'Apricots', price: 3.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/bananas.png',name: 'Bananas', price: 6.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/beans.png',name: 'Beans', price: 9.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/cucumbers.png',name: 'Cucumbers', price: 2.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/green-beans.png',name: 'Green Beans', price: 1.5, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/juicy-oranges.png',name: 'Oranges', price: 3.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/leek.png',name: 'leek', price: 2.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/oranges.png',name: 'Oranges', price: 1.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/papayas.png',name: 'Papayas', price: 2.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/salad.png',name: 'Salad', price: 1.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/stockvault-green-grapes.png',name: 'Stockvault Grapes', price: 4.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/stockvault-tuna.png',name: 'Stockvault Tuna', price: 4.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/tomatoes.png',name: 'Tomatos', price: 3.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+                  Food(image: 'assets/watermelons.png',name: 'Watermelons', price: 1.0, unity: '\$', kilos: '/kg', description: 'Lorem Ipsum is simply dummy text'),
+   ];
 
   final stylePrice = const TextStyle(
                               fontSize: 16.0,
@@ -55,8 +76,8 @@ class Article extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(8)),
                 color: Colors.white,
               ),
-              child: const Image(
-                image: AssetImage('assets/apple.png'),
+              child: Image(
+                image: AssetImage(_food[widget.index].image),
               ),
             ),
             Container(
@@ -65,7 +86,7 @@ class Article extends StatelessWidget {
               padding: const EdgeInsets.only(left: 8),
               alignment: Alignment.centerLeft,
               child: Text(
-                '$unity$price $kilo',
+               '${_food[widget.index].unity}${_food[widget.index].price} ${_food[widget.index].kilos}',
                 style: stylePrice,
               ),
             ),
@@ -74,7 +95,7 @@ class Article extends StatelessWidget {
               width: double.infinity,
               padding: const EdgeInsets.only(left: 8.0),
               child: Text(
-                title,
+                _food[widget.index].name,
                 style: styleTitle,
               ),
             ),
@@ -83,7 +104,7 @@ class Article extends StatelessWidget {
               width: double.infinity,
               padding: const EdgeInsets.only(left: 8.0, right: 8.0),
               child: Text(
-                description,
+                _food[widget.index].description,
                 style: styleDescription,
               ),
             ),
