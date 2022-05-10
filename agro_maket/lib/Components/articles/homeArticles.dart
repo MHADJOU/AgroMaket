@@ -45,20 +45,25 @@ class _homeArticleState extends State<homeArticle> {
                       child: Row(
                         children: [
                           Expanded(
+                            // Vegetables food
                             child: InkWell(
                               child: Text(categoriesName[0], style: styleCategoriesName,),
                               onTap: (){},
                               )
                           ),
+                          //Fruits foods
                           Expanded(
                             child: InkWell(
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 15.0),
                                 child: Text(categoriesName[1], style: styleCategoriesName,),
                               ),
-                              onTap: (){},
+                              onTap: (){
+                                Navigator.pushNamed(context, '/fruits');
+                              },
                               )
                           ),
+                          //Proteins foods
                           InkWell(
                             child: Text(
                               categoriesName[2], style: styleCategoriesName,),
@@ -72,6 +77,7 @@ class _homeArticleState extends State<homeArticle> {
               ),
             ),
             const SizedBox(height: 15.0,),
+            // Seeds foods
             Center(
               child: InkWell(child: Text(categoriesName[3], style: styleCategoriesName,),
                       onTap: (){},
@@ -79,7 +85,8 @@ class _homeArticleState extends State<homeArticle> {
             ),
            const  SizedBox(height: 20.0,)
           ]
-          )),
+          ),
+          ),
           
         
              SliverFillRemaining(

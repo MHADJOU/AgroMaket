@@ -6,17 +6,19 @@ import 'Components/signUp/signUp.dart';
 import 'Components/password/forget.dart';
 import 'Components/password/confirmEmail.dart';
 import 'Screens/home.dart';
+import 'Components/articles/fruitsArticle.dart';
 
 void main() =>  runApp(MaterialApp(
-  initialRoute: '/home',
+  initialRoute: '/',
   routes: {
-    //'/':(context) => Loading(),
+    '/':(context) => Loading(),
     '/connexion': (context) => SignIn(),
     '/SignUp': (context) => const CreateCount(),
     '/welcome' :(context) => Welcome(),
     '/forgetPass':(context) => forgetPass(),
     '/confirmEmail':(context) => const ConfirmPass(),
     '/home' : (context) => const Home(),
+    '/fruits' :(context) => const fruitsArticles(),
 
   },
 ),
