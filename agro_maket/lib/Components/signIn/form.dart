@@ -11,7 +11,7 @@ class Connexion extends StatefulWidget {
 
 class _ConnexionState extends State<Connexion> {
 
-  final Textstyle = TextStyle(
+  final Textstyle = const TextStyle(
                 color: Color.fromARGB(255, 54, 2, 43),
                 fontFamily:'RedRose',
                 fontSize: 24,

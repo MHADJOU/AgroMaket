@@ -1,3 +1,4 @@
+import 'package:agro_maket/Screens/createdAccount.dart';
 import 'package:agro_maket/Screens/welcome.dart';
 import 'package:flutter/material.dart';
 import 'Screens/logo.dart';
@@ -9,12 +10,13 @@ import 'Screens/home.dart';
 import 'Components/articles/fruitsArticle.dart';
 
 void main() =>  runApp(MaterialApp(
-  initialRoute: '/',
+  initialRoute: '/cretedAccount',
   routes: {
-    '/':(context) => Loading(),
-    '/connexion': (context) => SignIn(),
-    '/SignUp': (context) => const CreateCount(),
+    //'/':(context) => const Loading(),
+    '/connexion': (context) => const SignIn(),
     '/welcome' :(context) => Welcome(),
+    '/SignUp': (context) => const CreateCount(),
+    '/cretedAccount':(context) => created_Account(),
     '/forgetPass':(context) => forgetPass(),
     '/confirmEmail':(context) => const ConfirmPass(),
     '/home' : (context) => const Home(),

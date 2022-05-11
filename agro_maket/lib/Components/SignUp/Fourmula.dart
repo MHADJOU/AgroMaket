@@ -192,7 +192,9 @@ class _formCountState extends State<formCount> {
                       ),
                       child: InkWell(
                         //focusColor: Color.fromARGB(255, 19, 89, 2),
-                        onTap: (){},
+                        onTap: (){
+                          Navigator.pushNamed(context, '/cretedAccount');
+                        },
                         child: Text(
                           'Create',
                           textAlign: TextAlign.center,
